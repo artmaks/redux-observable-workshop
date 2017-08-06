@@ -43,7 +43,17 @@ class App extends Component {
 
     getValue(type) {
         const { state } = this.props;
-        const value = state[type].value;
+        const pathSegments = type.split('.');
+
+        let value;
+
+        if (pathSegments[0] === 'wind') {
+            value = state.wind[pathSegments[1]].value;
+        }
+        else {
+            value = state[pathSegments[0]].value;
+        }
+
         return value == null ? '--' : value;
     }
 
@@ -53,6 +63,13 @@ class App extends Component {
         return state[type].error != null;
     }
 
+    getWindDirectionIcon() {
+        const direction = this.getState().wind.direction.value;
+        if (direction == null) {
+            return 'na';
+        }
+        return `wind wi-from-${direction}`;
+    }
 
     render() {
         return (
@@ -95,7 +112,14 @@ class App extends Component {
 
                         <div className="col-xs-12 col-sm-4">
 
-
+                            <DashboardPanel
+                              error={this.hasError('wind')}
+                              loading={this.isLoading('wind')}
+                              icon={this.getWindDirectionIcon()}
+                              iconClassName="wind-direction-icon"
+                              iconType="wi"
+                              value={`${this.getValue('wind.speed')} m/s`}
+                            />
 
                         </div>
 
