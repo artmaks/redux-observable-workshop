@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { Action } from './common/helpers';
 import { Icon } from './common/icon.component';
 import { DashboardPanel } from './common/dashboard-panel.component';
 
 import './app.style';
 
+import {
+  SYNC_START,
+  SYNC_STOP,
+} from './sync/reducer';
 
 class App extends Component {
+
+    componentDidMount() {
+        this.props.dispatch(Action(SYNC_START));
+    }
 
     getState() {
         return this.props.state;
