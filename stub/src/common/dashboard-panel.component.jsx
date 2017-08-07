@@ -3,6 +3,7 @@ import React from 'react';
 import { Icon } from './icon.component';
 import { ErrorIcon } from './error-icon.component';
 import { Loader } from './loader.component';
+import { StatsTable } from './stats-table.component';
 import './dashboard-panel.scss';
 
 
@@ -34,6 +35,8 @@ export const DashboardPanel = ({
                     />
                     { value }
                 </div>
+
+                <StatsTable values={statsValues} />
 
             </div>
         </div>

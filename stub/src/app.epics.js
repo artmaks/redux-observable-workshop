@@ -36,17 +36,17 @@ export const rootEpic = combineEpics(
 
   calcConditionsEpic,
 
-  // temperatureStatsDailyEpic,
-  // temperatureStatsWeeklyEpic,
-  // temperatureStatsTotalEpic,
+  temperatureStatsDailyEpic,
+  temperatureStatsWeeklyEpic,
+  temperatureStatsTotalEpic,
 
-  // windStatsDailyEpic,
-  // windStatsWeeklyEpic,
-  // windStatsTotalEpic,
+  windStatsDailyEpic,
+  windStatsWeeklyEpic,
+  windStatsTotalEpic,
 
-  // humidityStatsDailyEpic,
-  // humidityStatsWeeklyEpic,
-  // humidityStatsTotalEpic,
+  humidityStatsDailyEpic,
+  humidityStatsWeeklyEpic,
+  humidityStatsTotalEpic,
 
   syncStartEpic,
   syncEpic,

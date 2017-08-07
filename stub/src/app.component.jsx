@@ -71,6 +71,10 @@ class App extends Component {
         return `wind wi-from-${direction}`;
     }
 
+    getStatsFor(type) {
+        return this.getState().stats[type];
+    }
+
     render() {
         return (
             <div className="App">
@@ -106,6 +110,7 @@ class App extends Component {
                                 loading={this.isLoading('temperature')}
                                 icon="thermometer"
                                 value={`${this.getValue('temperature')} °C`}
+                                statsValues={this.getStatsFor('temperature')}
                             />
 
                         </div>
@@ -119,6 +124,7 @@ class App extends Component {
                               iconClassName="wind-direction-icon"
                               iconType="wi"
                               value={`${this.getValue('wind.speed')} m/s`}
+                              statsValues={this.getStatsFor('wind')}
                             />
 
                         </div>
@@ -131,6 +137,7 @@ class App extends Component {
                               loading={this.isLoading('humidity')}
                               icon="humidity"
                               value={this.getValue('humidity')}
+                              statsValues={this.getStatsFor('humidity')}
                             />
 
                         </div>

@@ -7,6 +7,7 @@ import { humidityReducer } from './humidity/reducer';
 import { conditionsReducer } from './conditions/reducer';
 import { syncReducer } from './sync/reducer';
 import { precipitationReducer } from './precipitation/reducer';
+import { statsReducer } from './stats/reducer';
 
 
 export const rootReducer = combineReducers({
@@ -15,5 +16,6 @@ export const rootReducer = combineReducers({
     humidity      : humidityReducer,
     conditions    : conditionsReducer,
     precipitation : precipitationReducer,
+    stats         : statsReducer,
     sync          : syncReducer,
 });
