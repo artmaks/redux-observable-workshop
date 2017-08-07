@@ -31,7 +31,7 @@ export const rootEpic = combineEpics(
   temperatureFetchEpic,
   windSpeedFetchEpic,
   windDirectionFetchEpic,
-  // humidityFetchEpic,
+  humidityFetchEpic,
   // precipitationFetchEpic,
 
   // calcConditionsEpic,

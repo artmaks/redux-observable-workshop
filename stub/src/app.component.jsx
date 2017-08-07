@@ -126,6 +126,12 @@ class App extends Component {
                         <div className="col-xs-12 col-sm-4">
 
 
+                            <DashboardPanel
+                              error={this.hasError('humidity')}
+                              loading={this.isLoading('humidity')}
+                              icon="humidity"
+                              value={this.getValue('humidity')}
+                            />
 
                         </div>
 
