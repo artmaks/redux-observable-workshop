@@ -21,6 +21,16 @@ If you have some problems with implementing you can check instruction below. I w
 
 Also in the ``implementation`` branch you can find implemented ``stub`` directory and commits for every part of instruction.
 
+# Diagrams
+
+Before starting the implementation I recommend to see these diagrams...
+
+#### #1 Block scheme diagram
+![Block scheme](https://raw.githubusercontent.com/artmaks/redux-observable-workshop/master/info/PogodaDiagram.png)
+
+#### #1 Store -> Interface diagram
+![Interface Diagram](https://raw.githubusercontent.com/artmaks/redux-observable-workshop/master/info/PogodaDiagram2.png)
+
 # Instruction (step by step)
 
 **I. Запустить счетчик температуры (сейчас статика)**
